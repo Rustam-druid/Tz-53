@@ -1,8 +1,9 @@
-import React, {ReactChild, ReactElement, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css'
 
 import TaskTask from "./Task.Task.tsx";
 import {ITask} from "./type";
+import Taskadd from "./task/task.tsx";
 
 
 const App = () => {
@@ -53,7 +54,7 @@ setTasks(Tasks.filter(t => t.id !== id))
               </div>
 
                   {Tasks.map(task => (
-                      <TaskTask key={task.id} title={task.title} remove={() => remove(task.id)}  />
+                      <Taskadd key={task.id} title={task.title} remove={() => remove(task.id)}  />
                   ))}
 
 
